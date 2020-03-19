@@ -65,6 +65,7 @@ bot.on('messageCreate', async (msg) => {
     const commandName = parts[0].substr(PREFIX.length);
 
     if (commandName === 'start') {
+        msg.channel.createMessage(`Timpul incepe sa se scurga.`);
         await sleep(MINUTE);
         msg.channel.createMessage(`Timpul protejat expira. Sariti cu POIs.`);
         await sleep(6 * MINUTE)
