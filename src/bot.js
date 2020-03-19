@@ -66,10 +66,10 @@ bot.on('messageCreate', async (msg) => {
 
     if (commandName === 'start') {
         msg.channel.createMessage(`Timpul incepe sa se scurga.`);
-        await sleep(MINUTE);
+        await sleep(60000);
         msg.channel.createMessage(`Timpul protejat expira. Sariti cu POIs.`);
-        await sleep(6 * MINUTE)
-        msg.channel.createMessage(`Timpul protejat incepe iar. Calmati-va.`)
+        await sleep(6 * 60000);
+        msg.channel.createMessage(`Timpul protejat incepe iar. Calmati-va.`);
     }
 
     // Get the appropriate handler for the command, if there is one.
