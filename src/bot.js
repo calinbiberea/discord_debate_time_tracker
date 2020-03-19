@@ -8,7 +8,7 @@ const {BOT_TOKEN} = {
 // Create a Client instance with our bot token.
 const bot = new eris.Client(BOT_TOKEN);
 const PREFIX = '!';
-const MINUTE = 30000;
+const MINUTE = 60000;
 
 // When the bot is connected and ready, log to console.
 bot.on('ready', () => {
