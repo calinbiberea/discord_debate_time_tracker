@@ -69,10 +69,10 @@ bot.on('messageCreate', async (msg) => {
         msg.channel.createMessage(`Inca un test sa fac cu neuronu.`);
         setTimeout(function () {
             msg.channel.createMessage(`Timpul protejat expira. Sariti cu POIs.`);
-        }, 30000);
+        }, 60 * 1000);
         setTimeout(function () {
             msg.channel.createMessage(`Timpul protejat incepe iar. Calmati-va.`);
-        }, 6 * 30000);
+        }, 6 * 60 * 1000);
     }
 
     // Get the appropriate handler for the command, if there is one.
