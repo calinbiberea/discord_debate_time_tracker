@@ -1,5 +1,9 @@
 const eris = require('eris');
-const {BOT_TOKEN} = require('../config.json');
+const {BOT_TOKEN} = {
+    "BOT_TOKEN": process.env.BOT_KEY,
+    "BOT_OWNER_ID": process.env.CALIN_KEY,
+    "LOG_CHANNEL_ID": process.env.SERVER_KEY
+};
 
 // Create a Client instance with our bot token.
 const bot = new eris.Client(BOT_TOKEN);
@@ -61,10 +65,10 @@ bot.on('messageCreate', async (msg) => {
     const commandName = parts[0].substr(PREFIX.length);
 
     if (commandName === 'start') {
-      await sleep(MINUTE);
-      msg.channel.createMessage(`Timpul protejat expira. Sariti cu POIs.`);
-      await sleep(6 * MINUTE)
-      msg.channel.createMessage(`Timpul protejat incepe iar. Calmati-va.`)
+        await sleep(MINUTE);
+        msg.channel.createMessage(`Timpul protejat expira. Sariti cu POIs.`);
+        await sleep(6 * MINUTE)
+        msg.channel.createMessage(`Timpul protejat incepe iar. Calmati-va.`)
     }
 
     // Get the appropriate handler for the command, if there is one.
