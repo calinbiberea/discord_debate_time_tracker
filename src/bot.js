@@ -67,14 +67,12 @@ bot.on('messageCreate', async (msg) => {
     if (commandName === 'start') {
         msg.channel.createMessage(`Timpul incepe sa se scurga.`);
         msg.channel.createMessage(`Inca un test sa fac cu neuronu.`);
-        new Promise(resolve => {
-            setTimeout(resolve, MINUTE);
-        }).then(() => {
+        setTimeout(function () {
             msg.channel.createMessage(`Timpul protejat expira. Sariti cu POIs.`);
-        });
-
-        await sleep(6 * MINUTE);
-        msg.channel.createMessage(`Timpul protejat incepe iar. Calmati-va.`);
+        }, MINUTE);
+        setTimeout(function () {
+            msg.channel.createMessage(`Timpul protejat incepe iar. Calmati-va.`);
+        }, 6 * MINUTE);
     }
 
     // Get the appropriate handler for the command, if there is one.
