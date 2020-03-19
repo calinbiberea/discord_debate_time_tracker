@@ -25,6 +25,10 @@ commandHandlerForCommandName['start'] = (msg, args) => {
     return msg.channel.createMessage(`Mi-am facut treaba si n-am crapat, ce viata.`);
 };
 
+function message(message) {
+    msg.channel.createMessage(message);
+};
+
 // Every time a message is sent anywhere the bot is present,
 // this event will fire and we will check if the bot was mentioned.
 // If it was, the bot will attempt to respond with "Present".
@@ -67,12 +71,8 @@ bot.on('messageCreate', async (msg) => {
     if (commandName === 'start') {
         msg.channel.createMessage(`Timpul incepe sa se scurga.`);
         msg.channel.createMessage(`Inca un test sa fac cu neuronu.`);
-        setTimeout(function () {
-            msg.channel.createMessage(`Timpul protejat expira. Sariti cu POIs.`);
-        }, 60 * 1000);
-        setTimeout(function () {
-            msg.channel.createMessage(`Timpul protejat incepe iar. Calmati-va.`);
-        }, 6 * 60 * 1000);
+        setTimeout(message.bind(this, `Timpul protejat a experit. POIs barage from now.`), 60 * 1000);
+        setTimeout(message.bind(this, `Timpul protejat incepe iar. Calmati-va.`), 6 * 60 * 1000);
     }
 
     // Get the appropriate handler for the command, if there is one.
