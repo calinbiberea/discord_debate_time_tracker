@@ -8,7 +8,7 @@ const {BOT_TOKEN} = {
 // Create a Client instance with our bot token.
 const bot = new eris.Client(BOT_TOKEN);
 const PREFIX = '!';
-const MINUTE = 60000;
+const HALF_MINUTE = 30000;
 
 // When the bot is connected and ready, log to console.
 bot.on('ready', () => {
@@ -67,7 +67,8 @@ bot.on('messageCreate', async (msg) => {
     if (commandName === 'start') {
         msg.channel.createMessage(`Timpul incepe sa se scurga.`);
         msg.channel.createMessage(`Inca un test sa fac cu neuronu.`);
-        await sleep(MINUTE);
+        await sleep(HALF_MINUTE);
+        await sleep(HALF_MINUTE);
         msg.channel.createMessage(`Timpul protejat expira. Sariti cu POIs.`);
         await sleep(6 * MINUTE);
         msg.channel.createMessage(`Timpul protejat incepe iar. Calmati-va.`);
