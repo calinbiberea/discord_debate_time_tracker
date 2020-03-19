@@ -68,6 +68,7 @@ bot.on('messageCreate', async (msg) => {
         msg.channel.createMessage(`Timpul incepe sa se scurga.`);
         msg.channel.createMessage(`Inca un test sa fac cu neuronu.`);
         await sleep(HALF_MINUTE);
+        msg.channel.createMessage(`30 de secunde de prajeala.`);
         await sleep(HALF_MINUTE);
         msg.channel.createMessage(`Timpul protejat expira. Sariti cu POIs.`);
         await sleep(6 * MINUTE);
