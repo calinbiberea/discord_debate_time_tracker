@@ -1,0 +1,17 @@
+{
+  "name": "time-tracker",
+  "version": "1.0.0",
+  "description": "A time tracking bot to make debating on Discord a bliss not a pain.",
+  "main": "./src/bot.js",
+  "scripts": {
+    "start": "node ./src/bot.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Calin Biberea",
+  "license": "Unlicense",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "eris": "^0.9.0",
+    "express": "^4.16.4"
+  }
+}
